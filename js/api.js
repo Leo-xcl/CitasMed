@@ -23,12 +23,12 @@
   var LATENCY_MS = 250;
 
   var DOCTORS = [
-    { id: 1, name: 'Dra. Laura Méndez',     specialty: 'Medicina general', room: 'Consultorio 1', shifts: ['am', 'pm'] },
+    { id: 1, name: 'Dra. Mady Méndez',     specialty: 'Medicina general', room: 'Consultorio 1', shifts: ['am', 'pm'] },
     { id: 2, name: 'Dr. Carlos Ortega',     specialty: 'Medicina general', room: 'Consultorio 2', shifts: ['am'] },
-    { id: 3, name: 'Dra. Sofía Ramírez',    specialty: 'Pediatría',        room: 'Consultorio 3', shifts: ['am', 'pm'] },
-    { id: 4, name: 'Dr. Andrés Villalobos', specialty: 'Cardiología',      room: 'Consultorio 4', shifts: ['pm'] },
-    { id: 5, name: 'Dra. Elena Castro',     specialty: 'Dermatología',     room: 'Consultorio 5', shifts: ['am', 'pm'] },
-    { id: 6, name: 'Dr. Mateo Herrera',     specialty: 'Odontología',      room: 'Consultorio 6', shifts: ['pm'] }
+    { id: 3, name: 'Dra. Ximena Ramírez',    specialty: 'Pediatría',        room: 'Consultorio 3', shifts: ['am', 'pm'] },
+    { id: 4, name: 'Dr. Andrés Terrazas', specialty: 'Cardiología',      room: 'Consultorio 4', shifts: ['pm'] },
+    { id: 5, name: 'Dra. Nauly Hermosillo',     specialty: 'Dermatología',     room: 'Consultorio 5', shifts: ['am', 'pm'] },
+    { id: 6, name: 'Dr. Cristian Castro',     specialty: 'Odontología',      room: 'Consultorio 6', shifts: ['pm'] }
   ];
 
   var SHIFT_SLOTS = {

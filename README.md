@@ -36,9 +36,8 @@ DELETE /appointments/:id       -> cancelar
 - Para empezar limpio: abre una **ventana de incógnito** o ejecuta `localStorage.clear()` en la consola.
 - ~30 % de los horarios aparecen como ocupados (datos de ejemplo generados de forma determinista).
 
-## Despliegue (sitio estático)
-
-Sube la carpeta `citasmed/` a GitHub Pages, Netlify o Vercel. No requiere configuración ni build.
+## Despliegue
+Para ver la aplicacion desplegada haz click [aqui]( https://leo-xcl.github.io/CitasMed)
 
 ## Accesibilidad
 
