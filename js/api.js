@@ -1,10 +1,9 @@
 /*
- * api.js — "Backend" simulado de CitasMed (JavaScript puro, sin Node).
+ * api.js — Capa de servicio de CitasMed (JavaScript puro, sin Node).
  *
  * Expone window.API con una interfaz tipo REST asíncrona. La interfaz de usuario
- * (app.js) NUNCA toca localStorage ni las reglas de negocio: todo pasa por aquí,
- * igual que pasaría con un servidor real. Para migrar a un backend real solo
- * habría que cambiar request() por fetch().
+ * (app.js) NUNCA toca localStorage ni las reglas de negocio: todo pasa por aquí.
+ * request() es el único punto de acceso a los datos.
  *
  * Rutas:
  *   GET    /specialties
@@ -64,7 +63,7 @@
   function parseISO(iso) { var p = iso.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]); }
   function isWeekend(d) { return d.getDay() === 0 || d.getDay() === 6; }
 
-  // Hash determinista: simula que otros pacientes ya ocupan ~30 % de los horarios.
+  // Datos de ejemplo: ~30 % de los horarios figuran como ocupados (hash determinista).
   function seededBusy(doctorId, date, time) {
     var s = doctorId + '|' + date + '|' + time, h = 0;
     for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
@@ -225,7 +224,7 @@
     return { status: 404, data: { message: 'Ruta no encontrada.' } };
   }
 
-  /** Simula una petición HTTP: asíncrona, con latencia y rechazo en códigos >= 400. */
+  /** Petición asíncrona con latencia fija (permite mostrar estados de carga); rechaza con códigos >= 400. */
   function request(method, url, body) {
     return new Promise(function (resolve, reject) {
       setTimeout(function () {

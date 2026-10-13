@@ -1,6 +1,6 @@
 # CitasMed
 
-Prototipo de gestión de citas médicas — Práctica 3.3, Interacción Humano-Computadora.
+Aplicación web de gestión de citas médicas — Práctica 3.3, Interacción Humano-Computadora.
 
 **JavaScript puro**: HTML5 + CSS3 + JS. Sin Node, sin Express, sin frameworks, sin `npm install`.
 
@@ -13,11 +13,11 @@ Abre `index.html` con doble clic en cualquier navegador moderno. No hace falta s
 | Capa | Archivo | Qué hace |
 |---|---|---|
 | Presentación | `index.html`, `css/styles.css`, `js/app.js` | Vistas, enrutamiento por hash, foco y anuncios accesibles, validación en cliente |
-| Servicio ("backend") | `js/api.js` | API tipo REST asíncrona (GET/POST/PUT/DELETE), validación, reglas de disponibilidad y persistencia en `localStorage` |
+| Servicio | `js/api.js` | API tipo REST asíncrona (GET/POST/PUT/DELETE), validación, reglas de disponibilidad y persistencia en `localStorage` |
 
-La interfaz nunca toca `localStorage` ni las reglas de negocio: todo pasa por `window.API`. Para migrar a un servidor real solo habría que reemplazar `request()` en `api.js` por `fetch()`.
+La interfaz nunca toca `localStorage` ni las reglas de negocio: todo pasa por `window.API`. `request()` en `api.js` es el único punto de acceso a los datos.
 
-## Rutas de la API simulada
+## Rutas de la API
 
 ```
 GET    /specialties
@@ -32,9 +32,9 @@ DELETE /appointments/:id       -> cancelar
 
 ## Datos y pruebas
 
-- Los datos viven en el `localStorage` de cada navegador (clave `citasmed_db_v1`). Cada dispositivo tiene su propia "base de datos".
+- Los datos se guardan en el `localStorage` del navegador (clave `citasmed_db_v1`).
 - Para empezar limpio: abre una **ventana de incógnito** o ejecuta `localStorage.clear()` en la consola.
-- ~30 % de los horarios aparecen "ocupados" de forma determinista para simular a otros pacientes.
+- ~30 % de los horarios aparecen como ocupados (datos de ejemplo generados de forma determinista).
 
 ## Despliegue (sitio estático)
 

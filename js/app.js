@@ -1,6 +1,6 @@
 /*
  * app.js — Interfaz de CitasMed (JavaScript puro).
- * Solo se comunica con el "backend" a través de window.API (ver api.js).
+ * Solo se comunica con la capa de servicio a través de window.API (ver api.js).
  */
 (function () {
   'use strict';
