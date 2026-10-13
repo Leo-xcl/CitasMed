@@ -125,7 +125,7 @@
         '<div class="ticket ticket-sample" aria-hidden="true">' +
           '<div class="ticket-head"><span class="ticket-label">Comprobante de cita</span><span class="ticket-no">N.º 0147</span></div>' +
           '<div class="ticket-cut"></div>' +
-          '<dl class="ticket-body"><dd class="t-doc">Dra. Sofía Ramírez</dd><dd class="t-meta">Pediatría · Consultorio 3</dd>' +
+          '<dl class="ticket-body"><dd class="t-doc">Dra. Ximena Ramírez</dd><dd class="t-meta">Pediatría · Consultorio 3</dd>' +
           '<dd class="t-when">miércoles 14 de octubre</dd><dd class="t-time">10:30 h</dd></dl>' +
         '</div>' +
       '</section>' +
